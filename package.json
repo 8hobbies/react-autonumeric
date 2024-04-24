@@ -9,16 +9,18 @@
     "/dist/*.js"
   ],
   "scripts": {
+    "clean": "rimraf dist/",
     "dev": "vite",
     "build": "npm run compile && vite build",
     "compile": "tsc --build . src/lib src/test src/demo",
     "coverage": "vitest run --coverage --typecheck",
+    "doc": "npm run compile && typedoc && replace-in-files --string '=\"assets/' --replacement '=\"/assets/' docs/404.html",
     "format": "eslint --fix . && prettier . --write",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0 && prettier . --check",
     "preview": "vite preview",
     "test": "vitest --typecheck",
     "test-once": "npm run coverage",
-    "test-all": "npm run lint && npm run compile && npm run test-once"
+    "test-all": "npm run lint && npm run compile && npm run test-once && npm run doc"
   },
   "dependencies": {
     "@8hobbies/utils": "^1.2.1",
@@ -29,6 +31,8 @@
   "devDependencies": {
     "@8hobbies/eslint-conf-baseline": "^2.1.0",
     "@8hobbies/test-utils": "^1.1.1",
+    "@8hobbies/typedoc-plugin-404": "^2.2.0",
+    "@8hobbies/typedoc-plugin-plausible": "^1.0.2",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^15.0.2",
     "@testing-library/user-event": "^14.5.2",
@@ -45,6 +49,11 @@
     "globals": "^15.0.0",
     "jsdom": "^24.0.0",
     "prettier": "^3.2.5",
+    "replace-in-files-cli": "^2.2.0",
+    "rimraf": "^5.0.5",
+    "typedoc": "^0.25.13",
+    "typedoc-plugin-extra-footer": "^1.0.1",
+    "typedoc-plugin-mdn-links": "^3.1.22",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.7.0",
     "vite": "^5.2.9",
