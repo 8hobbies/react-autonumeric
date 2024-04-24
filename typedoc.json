@@ -1,0 +1,23 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "tsconfig": "./src/lib/tsconfig.json",
+  "entryPoints": [
+    "./src/lib/AutoNumericComponent.tsx",
+    "./src/lib/AutoNumericInput.tsx"
+  ],
+  "plugin": [
+    "@8hobbies/typedoc-plugin-404",
+    "@8hobbies/typedoc-plugin-plausible",
+    "typedoc-plugin-extra-footer",
+    "typedoc-plugin-mdn-links"
+  ],
+  "sitemapBaseUrl": "https://react-autonumeric.8hob.io",
+  "externalSymbolLinkMappings": {
+    "global": {
+      "typeof": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+    }
+  },
+  "extraFooter": "&copy; 2024 <a href=\"https://8hob.io\">8 Hobbies, LLC</a>",
+  "plausibleSiteDomain": "oss.8hob.io",
+  "page404SuppressDefaultThemeWarning": true
+}

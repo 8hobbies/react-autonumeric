@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: Lint
+name: Build and Deploy Pages
 
 on:
   push:
@@ -21,27 +21,43 @@ on:
     branches: ["master"]
 
 jobs:
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [20.x]
+  build:
+    name: Build Pages
+    runs-on: ubuntu-22.04
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20.x
           cache: "npm"
 
       - name: Install Dependencies
         run: |
           npm install
 
-      - name: Lint
+      - name: Generate Docs
         run: |
-          npm run lint
+          npm run doc
+
+      - name: Upload GitHub Pages Artifact
+        uses: actions/upload-pages-artifact@v3.0.1
+        with:
+          path: docs
+
+  deploy:
+    name: Deploy Pages
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-22.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
