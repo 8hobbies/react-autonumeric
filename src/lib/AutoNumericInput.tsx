@@ -17,11 +17,55 @@
 
 import type { ChangeEvent, ClassAttributes, InputHTMLAttributes } from "react";
 import AutoNumericComponent from "./AutoNumericComponent";
+import type { CallbackOptions } from "autonumeric";
 
-type InputProps = Omit<
+/** Same as {@link JSX!IntrinsicElements.input.props} excluding the `ref` property. */
+export type InputProps = Omit<
   InputHTMLAttributes<HTMLInputElement> & ClassAttributes<HTMLInputElement>,
   "ref"
 >;
+
+/** React {@link JSX!IntrinsicElements.input} component integrated with {@link !AutoNumeric}.
+ *
+ * @param options - Options of the component.
+ * @param options.inputProps - Options passed to {@link JSX!IntrinsicElements.input}. Same as {@link
+ * JSX!IntrinsicElements.input.props} excluding the `ref` property.
+ * @param options.autoNumericOptions - Options passed to {@link !AutoNumeric}. Same as {@link
+ * AutoNumeric!Options}.
+ * @returns The React component.
+ */
+export function AutoNumericInput({
+  inputProps,
+  autoNumericOptions,
+}: {
+  inputProps?: InputProps;
+  autoNumericOptions?: CallbackOptions;
+}): JSX.Element;
+
+/** React {@link JSX!IntrinsicElements.input} component integrated with {@link !AutoNumeric} and
+ * permits interaction with a React state.
+ *
+ * @param options - Options of the component.
+ * @param options.inputProps - Options passed to {@link JSX!IntrinsicElements.input}. Same as {@link
+ * JSX!IntrinsicElements.input.props}.
+ * @param options.autoNumericOptions - Options passed to {@link !AutoNumeric}. Same as {@link
+ * AutoNumeric!Options}.
+ * @param options.valueState - The state from the parent component to be passed in.
+ * @param options.valueStateSetter - The callback function that sets `options.valueState`.
+ * @returns The React component.
+ */
+// eslint-disable-next-line @typescript-eslint/unified-signatures
+export function AutoNumericInput({
+  inputProps,
+  autoNumericOptions,
+  valueState,
+  valueStateSetter,
+}: {
+  inputProps?: InputProps;
+  autoNumericOptions?: CallbackOptions;
+  valueState: string;
+  valueStateSetter: React.Dispatch<React.SetStateAction<string>>;
+}): JSX.Element;
 
 export function AutoNumericInput({
   inputProps,
@@ -31,17 +75,13 @@ export function AutoNumericInput({
 }:
   | {
       inputProps?: InputProps;
-      autoNumericOptions?: Parameters<
-        typeof AutoNumericComponent
-      >[0]["autoNumericOptions"];
+      autoNumericOptions?: CallbackOptions;
       valueState: string;
       valueStateSetter: React.Dispatch<React.SetStateAction<string>>;
     }
   | {
       inputProps?: InputProps;
-      autoNumericOptions?: Parameters<
-        typeof AutoNumericComponent
-      >[0]["autoNumericOptions"];
+      autoNumericOptions?: CallbackOptions;
       valueState?: undefined;
       valueStateSetter?: undefined;
     }): JSX.Element {
