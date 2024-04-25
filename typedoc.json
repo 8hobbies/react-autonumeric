@@ -5,11 +5,13 @@
     "./src/lib/AutoNumericComponent.tsx",
     "./src/lib/AutoNumericInput.tsx"
   ],
+  "entryPointStrategy": "expand",
   "plugin": [
     "@8hobbies/typedoc-plugin-404",
     "@8hobbies/typedoc-plugin-plausible",
     "typedoc-plugin-extra-footer",
-    "typedoc-plugin-mdn-links"
+    "typedoc-plugin-mdn-links",
+    "typedoc-plugin-rename-defaults"
   ],
   "sitemapBaseUrl": "https://react-autonumeric.8hob.io",
   "externalSymbolLinkMappings": {
