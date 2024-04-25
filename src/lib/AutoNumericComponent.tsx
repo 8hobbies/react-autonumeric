@@ -46,11 +46,11 @@ export default function AutoNumericComponent({
   autoNumericOptions,
   state,
 }: {
-  element: string;
-  refKey: string;
-  props?: Parameters<typeof createElement>[1];
-  autoNumericOptions?: CallbackOptions;
-  state?: NonNullable<Parameters<typeof AutoNumeric.set>[1]>;
+  element: Readonly<string>;
+  refKey: Readonly<string>;
+  props?: Readonly<Parameters<typeof createElement>[1]>;
+  autoNumericOptions?: Readonly<CallbackOptions>;
+  state?: Readonly<NonNullable<Parameters<typeof AutoNumeric.set>[1]>>;
 }): JSX.Element {
   const htmlElement = useRef<HTMLElement>(null);
   const autoNumeric = useRef<AutoNumeric | null>(null);
@@ -78,7 +78,7 @@ export default function AutoNumericComponent({
       htmlElement.current,
       autoNumericOptions ?? {},
     );
-  }, [htmlElement.current, autoNumericOptions]);
+  }, [htmlElement.current]);
 
   if (state !== undefined) {
     useEffect(() => {
