@@ -16,12 +16,15 @@
  */
 
 import AutoNumeric, { CallbackOptions } from "autonumeric";
-import { ReactHTML, createElement, useEffect, useRef } from "react";
+import { createElement, useEffect, useRef } from "react";
 
 /** The base React component integrated with {@link !AutoNumeric}.
  *
  * This component is used as a base to construct higher-level React component that integrates with
- * AutoNumeric. See {@link AutoNumericInput} for a live example.
+ * AutoNumeric. See {@link AutoNumericInput} for a live example. For some elements, you would also
+ * need to set the
+ * [`contenteditable`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable)
+ * attribute to true.
  *
  * @param options - Options of the component.
  * @param options.element - The element of the component, such as `"input"`.
@@ -32,6 +35,9 @@ import { ReactHTML, createElement, useEffect, useRef } from "react";
  * AutoNumeric!Options}.
  * @param options.state - The React state that controls and is controlled by {@link !AutoNumeric}.
  * If absent, this component will not interact with its parent via React states.
+ *
+ * @see [AutoNumeric: On which elements can it be
+ * used?](https://docs.autonumeric.org/Documentation/on%20which%20elements%20can%20it%20be%20used/)
  */
 export default function AutoNumericComponent({
   element,
@@ -40,7 +46,7 @@ export default function AutoNumericComponent({
   autoNumericOptions,
   state,
 }: {
-  element: keyof ReactHTML;
+  element: string;
   refKey: string;
   props?: Parameters<typeof createElement>[1];
   autoNumericOptions?: CallbackOptions;
