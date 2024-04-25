@@ -2,7 +2,7 @@
   "name": "react-autonumeric",
   "version": "1.0.0",
   "type": "module",
-  "main": "dist/index.js",
+  "browser": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "/dist/*.d.ts",
@@ -14,14 +14,23 @@
     "dev": "vite",
     "compile": "tsc --build . src/lib src/test src/demo",
     "coverage": "vitest run --coverage --typecheck",
-    "doc": "npm run compile && typedoc && replace-in-files --string '=\"assets/' --replacement '=\"/assets/' docs/404.html",
+    "doc": "typedoc && replace-in-files --string '=\"assets/' --replacement '=\"/assets/' docs/404.html",
     "format": "eslint --fix . && prettier . --write",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0 && prettier . --check",
+    "prepack": "npm run clean && npm run compile",
     "preview": "vite preview",
     "test": "vitest --typecheck",
     "test-once": "npm run coverage",
     "test-all": "npm run lint && npm run compile && npm run test-once && npm run doc"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8hobbies/react-autonumeric.git"
+  },
+  "keywords": [
+    "react",
+    "autonumeric"
+  ],
   "dependencies": {
     "@8hobbies/utils": "^1.2.1",
     "autonumeric": "^4.10.5",
