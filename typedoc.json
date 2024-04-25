@@ -16,8 +16,7 @@
   "sitemapBaseUrl": "https://react-autonumeric.8hob.io",
   "externalSymbolLinkMappings": {
     "global": {
-      "AutoNumeric": "https://docs.autonumeric.org/Documentation/methods/",
-      "typeof": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+      "AutoNumeric": "https://docs.autonumeric.org/Documentation/methods/"
     },
     "JSX": {
       "IntrinsicElements.input": "https://react.dev/reference/react-dom/components/input",
@@ -25,6 +24,9 @@
     },
     "AutoNumeric": {
       "Options": "https://docs.autonumeric.org/Documentation/configuration%20options/"
+    },
+    "autonumeric": {
+      "AutoNumeric.CallbackOptions": "https://docs.autonumeric.org/Documentation/configuration%20options/"
     }
   },
   "extraFooter": "&copy; 2024 <a href=\"https://8hob.io\">8 Hobbies, LLC</a>",
