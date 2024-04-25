@@ -18,6 +18,21 @@
 import AutoNumeric, { CallbackOptions } from "autonumeric";
 import { ReactHTML, createElement, useEffect, useRef } from "react";
 
+/** The base React component integrated with {@link !AutoNumeric}.
+ *
+ * This component is used as a base to construct higher-level React component that integrates with
+ * AutoNumeric. See {@link AutoNumericInput} for a live example.
+ *
+ * @param options - Options of the component.
+ * @param options.element - The element of the component, such as `"input"`.
+ * @param options.refKey - The name of the attribute that refers the underlying DOM element. This is
+ * typically [`"ref"`](https://react.dev/learn/manipulating-the-dom-with-refs).
+ * @param options.props - Options passed to the underlying element `options.element`.
+ * @param options.autoNumericOptions - Options passed to {@link !AutoNumeric}. Same as {@link
+ * AutoNumeric!Options}.
+ * @param options.state - The React state that controls and is controlled by {@link !AutoNumeric}.
+ * If absent, this component will not interact with its parent via React states.
+ */
 export default function AutoNumericComponent({
   element,
   refKey,
