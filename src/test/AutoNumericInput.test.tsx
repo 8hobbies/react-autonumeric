@@ -35,8 +35,7 @@ function ControlledAutoNumericInputWrapper({
     <AutoNumericInput
       inputProps={inputProps}
       autoNumericOptions={autoNumericOptions}
-      valueState={state}
-      valueStateSetter={setState}
+      valueState={{ state, stateSetter: setState }}
     />
   );
 }
@@ -98,7 +97,7 @@ test("Controlled AutoNumericInput changes the input state", async () => {
   }): JSX.Element {
     const [state, setState] = useState("");
     stateParent.state = state;
-    return <AutoNumericInput valueState={state} valueStateSetter={setState} />;
+    return <AutoNumericInput valueState={{ state, stateSetter: setState }} />;
   }
 
   const stateParent = { state: "" };
@@ -120,7 +119,7 @@ test("ControlledAutoNumericInput changes the input state", async () => {
   }): JSX.Element {
     const [state, setState] = useState("");
     stateParent.state = state;
-    return <AutoNumericInput valueState={state} valueStateSetter={setState} />;
+    return <AutoNumericInput valueState={{ state, stateSetter: setState }} />;
   }
 
   const stateParent = { state: "" };
@@ -144,7 +143,7 @@ test("Changing the input state of AutoNumericInput changes the display value", a
             setState("1111");
           }}
         />
-        <AutoNumericInput valueState={state} valueStateSetter={setState} />
+        <AutoNumericInput valueState={{ state, stateSetter: setState }} />
       </>
     );
   }

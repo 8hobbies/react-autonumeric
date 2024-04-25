@@ -25,8 +25,10 @@ export default function App(): JSX.Element {
       <AutoNumericInput />
 
       <AutoNumericInput
-        valueState={controlledInputState}
-        valueStateSetter={setControlledInputState}
+        valueState={{
+          state: controlledInputState,
+          stateSetter: setControlledInputState,
+        }}
       />
       <button
         onClick={() => {
