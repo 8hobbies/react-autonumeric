@@ -33,7 +33,8 @@ export type InputProps = Omit<
  * JSX!IntrinsicElements.input.props}.
  * @param options.autoNumericOptions - Options passed to {@link !AutoNumeric}. Same as {@link
  * AutoNumeric!Options}.
- * @param options.valueState - The state and state setter from the parent component.
+ * @param options.valueState - The state and state setter from the parent component to be passed
+ * into this component.
  * @param options.valueState.state - The state from the parent component to be passed in.
  * @param options.valueState.stateSetter - The callback function that sets
  * `options.valueState.state`.
@@ -44,10 +45,10 @@ export function AutoNumericInput({
   autoNumericOptions,
   valueState,
 }: {
-  inputProps?: InputProps;
-  autoNumericOptions?: CallbackOptions;
+  inputProps?: Readonly<InputProps>;
+  autoNumericOptions?: Readonly<CallbackOptions>;
   valueState?: {
-    state: string;
+    state: Readonly<string>;
     stateSetter: React.Dispatch<React.SetStateAction<string>>;
   };
 }): JSX.Element {
