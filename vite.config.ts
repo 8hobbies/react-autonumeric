@@ -1,9 +1,13 @@
 import { configDefaults, defineConfig } from "vitest/config";
+import { join } from "node:path";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
   root: "src/demo",
+  build: {
+    outDir: join(import.meta.dirname, "docs/demo"),
+  },
   test: {
     root: ".",
     environment: "jsdom",
