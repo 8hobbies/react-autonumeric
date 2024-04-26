@@ -1,5 +1,9 @@
 # React-AutoNumeric: React Components that Wrap [AutoNumeric][]
 
+[![npm version](https://badge.fury.io/js/react-autonumeric.svg)](https://badge.fury.io/js/react-autonumeric)
+[![Pipeline](https://github.com/8hobbies/react-autonumeric/actions/workflows/runtime.yml/badge.svg)](https://github.com/8hobbies/react-autonumeric/actions/workflows/runtime.yml)
+[![GitLab Mirror](https://img.shields.io/badge/GitLab-mirror-blue?logo=gitlab)](https://gitlab.com/8hobbies/react-autonumeric)
+
 [AutoNumeric][] is a powerful library that automatically format numbers and currencies.
 React-AutoNumeric brings that power to React.
 
