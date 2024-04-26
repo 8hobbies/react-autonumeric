@@ -15,6 +15,8 @@
  * limitations under the License.
  */
 
+import "bootstrap/dist/css/bootstrap.css";
+
 import AutoNumeric from "autonumeric";
 import { AutoNumericInput } from "../lib/AutoNumericInput";
 import { useState } from "react";
@@ -23,53 +25,58 @@ export default function App(): JSX.Element {
   const [controlledInputState, setControlledInputState] = useState("100");
   return (
     <>
-      <label>
-        Most basic usage
-        <AutoNumericInput />
-      </label>
+      <h1>React-AutoNumeric Demo</h1>
+      <div className="form-group mb-3">
+        <label>
+          Most basic usage
+          <AutoNumericInput inputProps={{ className: "form-control" }} />
+        </label>
+      </div>
 
-      <hr />
+      <div className="form-group mb-3">
+        <label>
+          Customize the input
+          <AutoNumericInput
+            inputProps={{ defaultValue: "99.99", className: "form-control" }}
+            autoNumericOptions={{ suffixText: "%" }}
+          />
+        </label>
+      </div>
 
-      <label>
-        Customize the input
-        <AutoNumericInput
-          inputProps={{ defaultValue: "99.99" }}
-          autoNumericOptions={{ suffixText: "%" }}
-        />
-      </label>
+      <div className="form-group mb-3">
+        <label>
+          Use predefined AutoNumeric options
+          <AutoNumericInput
+            inputProps={{ defaultValue: "10000", className: "form-control" }}
+            autoNumericOptions={
+              AutoNumeric.getPredefinedOptions().commaDecimalCharDotSeparator
+            }
+          />
+        </label>
+      </div>
 
-      <hr />
-
-      <label>
-        Use predefined AutoNumeric options
-        <AutoNumericInput
-          inputProps={{ defaultValue: "10000" }}
-          autoNumericOptions={
-            AutoNumeric.getPredefinedOptions().commaDecimalCharDotSeparator
-          }
-        />
-      </label>
-
-      <hr />
-
-      <label>
-        Interact with AutoNumericInput via a React state
-        <AutoNumericInput
-          valueState={{
-            state: controlledInputState,
-            stateSetter: setControlledInputState,
-          }}
-        />
-        <button
-          onClick={() => {
-            setControlledInputState(
-              (Number(controlledInputState) + 1).toString(),
-            );
-          }}
-        >
-          Add one
-        </button>
-      </label>
+      <div className="form-group mb-3">
+        <label>
+          Interact with AutoNumericInput via a React state
+          <AutoNumericInput
+            inputProps={{ className: "form-control" }}
+            valueState={{
+              state: controlledInputState,
+              stateSetter: setControlledInputState,
+            }}
+          />
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              setControlledInputState(
+                (Number(controlledInputState) + 1).toString(),
+              );
+            }}
+          >
+            Add one
+          </button>
+        </label>
+      </div>
     </>
   );
 }
