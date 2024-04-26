@@ -15,28 +15,61 @@
  * limitations under the License.
  */
 
+import AutoNumeric from "autonumeric";
 import { AutoNumericInput } from "../lib/AutoNumericInput";
 import { useState } from "react";
 
 export default function App(): JSX.Element {
-  const [controlledInputState, setControlledInputState] = useState("2222");
+  const [controlledInputState, setControlledInputState] = useState("100");
   return (
     <>
-      <AutoNumericInput />
+      <label>
+        Most basic usage
+        <AutoNumericInput />
+      </label>
 
-      <AutoNumericInput
-        valueState={{
-          state: controlledInputState,
-          stateSetter: setControlledInputState,
-        }}
-      />
-      <button
-        onClick={() => {
-          setControlledInputState("1111");
-        }}
-      >
-        Reset to 1111
-      </button>
+      <hr />
+
+      <label>
+        Customize the input
+        <AutoNumericInput
+          inputProps={{ defaultValue: "99.99" }}
+          autoNumericOptions={{ suffixText: "%" }}
+        />
+      </label>
+
+      <hr />
+
+      <label>
+        Use predefined AutoNumeric options
+        <AutoNumericInput
+          inputProps={{ defaultValue: "10000" }}
+          autoNumericOptions={
+            AutoNumeric.getPredefinedOptions().commaDecimalCharDotSeparator
+          }
+        />
+      </label>
+
+      <hr />
+
+      <label>
+        Interact with AutoNumericInput via a React state
+        <AutoNumericInput
+          valueState={{
+            state: controlledInputState,
+            stateSetter: setControlledInputState,
+          }}
+        />
+        <button
+          onClick={() => {
+            setControlledInputState(
+              (Number(controlledInputState) + 1).toString(),
+            );
+          }}
+        >
+          Add one
+        </button>
+      </label>
     </>
   );
 }
