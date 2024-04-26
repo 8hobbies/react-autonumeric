@@ -5,8 +5,10 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   root: "src/demo",
+  base: "/demo/",
   build: {
     outDir: join(import.meta.dirname, "docs/demo"),
+    emptyOutDir: true,
   },
   test: {
     root: ".",
