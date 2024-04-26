@@ -63,12 +63,17 @@ const [controlledInputState, setControlledInputState] = useState("100");
 
 ### API References
 
-For more detailed usage, check out the {@link AutoNumericInput} API references.
+For more detailed usage, check out the {@link AutoNumericInput} in the [API References][].
 
 ### Non-Input Usage
 
 If you would like a component other than input that is automatically formatted by AutoNumeric,
-please consult {@link AutoNumericComponent}.
+please consult {@link AutoNumericComponent} in the [API References][].
+
+## Demo
+
+Feel free to check out the [live demo](https://react-autonumeric.8hob.io).
 
 [AutoNumeric]: https://autonumeric.org/
 [input component]: https://react.dev/reference/react-dom/components/input
+[API References]: https://react-autonumeric.8hob.io
