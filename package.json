@@ -1,5 +1,6 @@
 {
   "name": "react-autonumeric",
+  "description": "AutoNumeric-Powered React Components. AutoNumeric is a powerful library that automatically format numbers and currencies. React-AutoNumeric brings that power to React.",
   "version": "1.0.0",
   "type": "module",
   "browser": "dist/index.js",

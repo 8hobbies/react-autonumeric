@@ -1,4 +1,4 @@
-# React-AutoNumeric: React Components that Wrap [AutoNumeric][]
+# React-AutoNumeric: [AutoNumeric][]-Powered React Components
 
 [![npm version](https://badge.fury.io/js/react-autonumeric.svg)](https://badge.fury.io/js/react-autonumeric)
 [![Pipeline](https://github.com/8hobbies/react-autonumeric/actions/workflows/runtime.yml/badge.svg)](https://github.com/8hobbies/react-autonumeric/actions/workflows/runtime.yml)
