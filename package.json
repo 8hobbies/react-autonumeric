@@ -39,7 +39,6 @@
     "autonumeric"
   ],
   "dependencies": {
-    "@8hobbies/utils": "^1.2.1",
     "autonumeric": "^4.10.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
