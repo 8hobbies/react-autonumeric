@@ -77,7 +77,7 @@ Feel free to check out the [live demo](https://react-autonumeric.8hob.io/demo).
 ## License
 
 ```text
-Copyright 2024 Hong Xu <hong@8hobbies.com>
+Copyright 2024 8 Hobbies, LLC <hong@8hobbies.com>
 
 Licensed under the Apache License, Version 2.0(the "License");
 you may not use files in this project except in compliance with the License.

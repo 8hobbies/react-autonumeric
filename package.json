@@ -27,6 +27,12 @@
     "type": "git",
     "url": "git+https://github.com/8hobbies/react-autonumeric.git"
   },
+  "author": "8 Hobbies, LLC",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/8hobbies/react-autonumeric/issues"
+  },
+  "homepage": "https://react-autonumeric.8hob.io",
   "keywords": [
     "react",
     "autonumeric"
