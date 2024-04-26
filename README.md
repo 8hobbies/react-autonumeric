@@ -3,6 +3,7 @@
 [![npm version](https://badge.fury.io/js/react-autonumeric.svg)](https://badge.fury.io/js/react-autonumeric)
 [![Pipeline](https://github.com/8hobbies/react-autonumeric/actions/workflows/runtime.yml/badge.svg)](https://github.com/8hobbies/react-autonumeric/actions/workflows/runtime.yml)
 [![GitLab Mirror](https://img.shields.io/badge/GitLab-mirror-blue?logo=gitlab)](https://gitlab.com/8hobbies/react-autonumeric)
+[![Demo](https://img.shields.io/badge/Demo-blue)](https://react-autonumeric.8hob.io/demo)
 
 [AutoNumeric][] is a powerful library that automatically format numbers and currencies.
 React-AutoNumeric brings that power to React.
@@ -76,7 +77,7 @@ please consult {@link AutoNumericComponent} in the [API References][].
 
 ## Demo
 
-Feel free to check out the [live demo](https://react-autonumeric.8hob.io/demo).
+There is a publicly available [live demo](https://react-autonumeric.8hob.io/demo).
 
 ## License
 
