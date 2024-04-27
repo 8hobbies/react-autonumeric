@@ -46,7 +46,7 @@ export default function AutoNumericComponent({
   autoNumericOptions,
   state,
 }: {
-  element: Readonly<string>;
+  element: Parameters<typeof createElement>[0];
   refKey: Readonly<string>;
   props?: Readonly<Parameters<typeof createElement>[1]>;
   autoNumericOptions?: Readonly<CallbackOptions>;
