@@ -39,7 +39,7 @@ import { createElement, useEffect, useRef } from "react";
  * @see [AutoNumeric: On which elements can it be
  * used?](https://docs.autonumeric.org/Documentation/on%20which%20elements%20can%20it%20be%20used/)
  */
-export default function AutoNumericComponent({
+export function AutoNumericComponent({
   element,
   refKey,
   props,

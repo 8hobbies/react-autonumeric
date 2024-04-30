@@ -16,7 +16,7 @@
  */
 
 import type { ChangeEvent, ClassAttributes, InputHTMLAttributes } from "react";
-import AutoNumericComponent from "./AutoNumericComponent";
+import { AutoNumericComponent } from "./AutoNumericComponent";
 import type { CallbackOptions } from "autonumeric";
 
 /** Same as {@link JSX!IntrinsicElements.input.props} excluding the `ref` property. */
