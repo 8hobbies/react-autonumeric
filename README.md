@@ -47,7 +47,7 @@ creates an [input component][] that is automatically formatted by AutoNumeric.
 ### Interact with `AutoNumericInput` via a React state
 
 ```tsx
-const [controlledInputState, setControlledInputState] = useState("100");
+const [controlledInputState, setControlledInputState] = useState("100000");
 
 <AutoNumericInput
   valueState={{
@@ -58,7 +58,9 @@ const [controlledInputState, setControlledInputState] = useState("100");
 <button
   onClick={() => {
     setControlledInputState(
-      (Number(controlledInputState) + 1).toString(),
+      (
+        Number(AutoNumeric.unformat(controlledInputState)) + 1
+      ).toString(),
     );
   }}
 >

@@ -22,7 +22,7 @@ import { AutoNumericInput } from "../lib/AutoNumericInput";
 import { useState } from "react";
 
 export default function App(): JSX.Element {
-  const [controlledInputState, setControlledInputState] = useState("100");
+  const [controlledInputState, setControlledInputState] = useState("100000");
   return (
     <>
       <h1>React-AutoNumeric Demo</h1>
@@ -69,7 +69,9 @@ export default function App(): JSX.Element {
             className="btn btn-primary"
             onClick={() => {
               setControlledInputState(
-                (Number(controlledInputState) + 1).toString(),
+                (
+                  Number(AutoNumeric.unformat(controlledInputState)) + 1
+                ).toString(),
               );
             }}
           >
