@@ -156,3 +156,25 @@ test("Changing the input state of AutoNumericInput changes the display value", a
   await user.click(screen.getByRole("button")); // Set the state.
   expect(inputElement).toHaveDisplayValue("1,111.00");
 });
+
+test("AutoNumericInput updates its state upon onBlur", async () => {
+  function TestApp(): JSX.Element {
+    const [state, setState] = useState("1");
+    return (
+      <>
+        <AutoNumericInput
+          valueState={{ state, stateSetter: setState }}
+          autoNumericOptions={{ emptyInputBehavior: "zero" }}
+        />
+      </>
+    );
+  }
+
+  const user = userEvent.setup();
+  render(<TestApp />);
+
+  const inputElement = screen.getByRole("textbox");
+  await user.clear(inputElement);
+  await user.keyboard("{Tab}");
+  expect(inputElement).toHaveDisplayValue("0.00");
+});

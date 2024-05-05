@@ -54,17 +54,25 @@ export function AutoNumericInput({
 }): JSX.Element {
   const stateProps =
     valueState !== undefined
-      ? {
+      ? ({
           value: valueState.state,
+          // For input, it is required set value in onChange.
           onChange: (e: ChangeEvent<HTMLInputElement>): void => {
-            // For input, it is required set value in onChange.
             valueState.stateSetter(e.currentTarget.value);
             if (inputProps?.onChange !== undefined) {
               inputProps.onChange(e);
             }
           },
-        }
-      : {};
+          // Some autoNumeric options such as emptyInputBehavior='zero' would not function properly
+          // without onBlur.
+          onBlur: (e): void => {
+            valueState.stateSetter(e.currentTarget.value);
+            if (inputProps?.onBlur !== undefined) {
+              inputProps.onBlur(e);
+            }
+          },
+        } as const satisfies InputProps)
+      : ({} as const);
   return (
     <AutoNumericComponent
       element="input"
