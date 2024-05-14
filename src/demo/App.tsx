@@ -25,7 +25,9 @@ export default function App(): JSX.Element {
   const [controlledInputState, setControlledInputState] = useState("100000");
   return (
     <>
-      <h1>React-AutoNumeric Demo</h1>
+      <h1>
+        <a href="https://react-autonumeric.8hob.io">React-AutoNumeric</a> Demo
+      </h1>
       <div className="form-group mb-3">
         <label>
           Most basic usage
