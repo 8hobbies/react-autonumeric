@@ -20,10 +20,8 @@ import { AutoNumericComponent } from "./AutoNumericComponent.js";
 import type { CallbackOptions } from "autonumeric";
 
 /** Same as {@link JSX!IntrinsicElements.input.props} excluding the `ref` property. */
-export type InputProps = Omit<
-  InputHTMLAttributes<HTMLInputElement> & ClassAttributes<HTMLInputElement>,
-  "ref"
->;
+export type InputProps = InputHTMLAttributes<HTMLInputElement> &
+  ClassAttributes<HTMLInputElement> & { ref?: undefined };
 
 /** React {@link JSX!IntrinsicElements.input} component integrated with {@link !AutoNumeric} and
  * permits interaction with a React state.
