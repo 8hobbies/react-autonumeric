@@ -18,7 +18,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 
 import AutoNumeric from "autonumeric";
-import { AutoNumericInput } from "../lib/AutoNumericInput";
+import { AutoNumericInput } from "../lib/AutoNumericInput.js";
 import { useState } from "react";
 
 export default function App(): JSX.Element {

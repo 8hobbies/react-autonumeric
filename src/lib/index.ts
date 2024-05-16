@@ -15,5 +15,8 @@
  * limitations under the License.
  */
 
-export * from "./AutoNumericComponent";
-export * from "./AutoNumericInput";
+export * from "./AutoNumericComponent.js";
+export * from "./AutoNumericInput.js";
+
+export type * from "./AutoNumericComponent.d.ts";
+export type * from "./AutoNumericInput.d.ts";
