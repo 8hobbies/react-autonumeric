@@ -81,6 +81,10 @@ please consult {@link AutoNumericComponent} in the [API References][].
 
 There is a publicly available [live demo](https://react-autonumeric.8hob.io/demo).
 
+## Related Project
+
+If you use [Material UI][], check out [material-ui-autonumeric][].
+
 ## License
 
 ```text
@@ -102,3 +106,5 @@ limitations under the License.
 [AutoNumeric]: https://autonumeric.org/
 [input component]: https://react.dev/reference/react-dom/components/input
 [API References]: https://react-autonumeric.8hob.io
+[Material UI]: https://mui.com/material-ui/
+[material-ui-autonumeric]: https://material-ui-autonumeric.8hob.io/
