@@ -40,7 +40,9 @@
     "autonumeric"
   ],
   "dependencies": {
-    "autonumeric": "^4.10.5",
+    "autonumeric": "^4.10.5"
+  },
+  "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
