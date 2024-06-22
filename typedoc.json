@@ -9,11 +9,11 @@
   "plugin": [
     "@8hobbies/typedoc-plugin-404",
     "@8hobbies/typedoc-plugin-plausible",
-    "typedoc-plugin-extra-footer",
     "typedoc-plugin-mdn-links",
     "typedoc-plugin-rename-defaults"
   ],
-  "sitemapBaseUrl": "https://react-autonumeric.8hob.io",
+  "hostedBaseUrl": "https://react-autonumeric.8hob.io",
+  "useHostedBaseUrlForAbsoluteLinks": true,
   "externalSymbolLinkMappings": {
     "global": {
       "AutoNumeric": "https://docs.autonumeric.org/Documentation/methods/"
@@ -29,7 +29,6 @@
       "AutoNumeric.CallbackOptions": "https://docs.autonumeric.org/Documentation/configuration%20options/"
     }
   },
-  "extraFooter": "&copy; 2024 <a href=\"https://8hob.io\">8 Hobbies, LLC</a>",
-  "plausibleSiteDomain": "oss.8hob.io",
-  "page404SuppressDefaultThemeWarning": true
+  "customFooterHtml": "&copy; 2024 <a href=\"https://8hob.io\">8 Hobbies, LLC</a>",
+  "plausibleSiteDomain": "oss.8hob.io"
 }
