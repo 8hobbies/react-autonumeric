@@ -65,11 +65,11 @@
     "jsdom": "^24.1.0",
     "prettier": "^3.3.2",
     "rimraf": "^6.0.1",
-    "typedoc": "^0.26.3",
-    "typedoc-plugin-mdn-links": "^3.2.2",
+    "typedoc": "^0.26.4",
+    "typedoc-plugin-mdn-links": "^3.2.3",
     "typedoc-plugin-rename-defaults": "^0.7.1",
     "typescript": "^5.5.3",
-    "typescript-eslint": "^7.15.0",
+    "typescript-eslint": "^7.16.0",
     "vite": "^5.3.3",
     "vitest": "^2.0.2"
   }
