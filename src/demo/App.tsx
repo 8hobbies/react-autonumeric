@@ -17,9 +17,9 @@
 
 import "bootstrap/dist/css/bootstrap.css";
 
+import { type JSX, useState } from "react";
 import AutoNumeric from "autonumeric";
 import { AutoNumericInput } from "../lib/AutoNumericInput.js";
-import { useState } from "react";
 
 export default function App(): JSX.Element {
   const [controlledInputState, setControlledInputState] = useState("100000");
