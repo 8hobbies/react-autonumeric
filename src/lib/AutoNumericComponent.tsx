@@ -16,7 +16,7 @@
  */
 
 import AutoNumeric, { CallbackOptions } from "autonumeric";
-import { createElement, useEffect, useRef } from "react";
+import { type JSX, createElement, useEffect, useRef } from "react";
 
 /** The base React component integrated with {@link !AutoNumeric}.
  *

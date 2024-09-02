@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
+import { type JSX, useState } from "react";
 import { render, screen } from "@testing-library/react";
 import AutoNumeric from "autonumeric";
 import { AutoNumericInput } from "../lib/index.js";
-import { useState } from "react";
 import { userEvent } from "@testing-library/user-event";
 
 function ControlledAutoNumericInputWrapper({

@@ -15,7 +15,12 @@
  * limitations under the License.
  */
 
-import type { ChangeEvent, ClassAttributes, InputHTMLAttributes } from "react";
+import type {
+  ChangeEvent,
+  ClassAttributes,
+  InputHTMLAttributes,
+  JSX,
+} from "react";
 import { AutoNumericComponent } from "./AutoNumericComponent.js";
 import type { CallbackOptions } from "autonumeric";
 
