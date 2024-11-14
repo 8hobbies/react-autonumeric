@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: Build and Deploy Pages
+name: Publish Dry Run
 
 on:
   push:
@@ -21,8 +21,5 @@ on:
     branches: ["master"]
 
 jobs:
-  pages:
-    permissions:
-      pages: write
-      id-token: write
-    uses: 8hobbies/workflows/.github/workflows/npm-doc-pages.yml@beb24d29082fba712f768d8957294d5b6db27f08
+  run:
+    uses: 8hobbies/workflows/.github/workflows/npm-publish-dry-run.yml@998d75668913e8edccf662dd9091a6aeada7dc93
