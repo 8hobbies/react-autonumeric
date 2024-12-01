@@ -21,8 +21,7 @@
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0 && prettier . --check",
     "prepack": "npm run clean && npm run compile",
     "preview": "vite preview",
-    "test": "vitest --typecheck",
-    "test-once": "npm run coverage",
+    "test": "vitest run --typecheck",
     "test-all": "npm run lint && npm run compile && npm run test-once && npm run doc"
   },
   "repository": {
@@ -49,8 +48,8 @@
   "devDependencies": {
     "@8hobbies/eslint-conf-baseline": "^6.0.0",
     "@8hobbies/eslint-conf-react-baseline": "^3.0.0",
-    "@8hobbies/typedoc-plugin-404": "^3.0.0",
-    "@8hobbies/typedoc-plugin-plausible": "^2.0.0",
+    "@8hobbies/typedoc-plugin-404": "^3.1.0",
+    "@8hobbies/typedoc-plugin-plausible": "^2.1.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
@@ -65,10 +64,10 @@
     "jsdom": "^25.0.1",
     "prettier": "^3.4.1",
     "rimraf": "^6.0.1",
-    "typedoc": "^0.26.11",
+    "typedoc": "^0.27.2",
     "typedoc-plugin-mdn-links": "^4.0.3",
     "typedoc-plugin-rename-defaults": "^0.7.2",
-    "typescript": "~5.6.3",
+    "typescript": "~5.7.2",
     "typescript-eslint": "^8.16.0",
     "vite": "^6.0.1",
     "vitest": "^2.1.6"
