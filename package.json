@@ -48,7 +48,7 @@
   "devDependencies": {
     "@8hobbies/eslint-conf-baseline": "6.0.0",
     "@8hobbies/eslint-conf-react-baseline": "3.0.0",
-    "@8hobbies/typedoc-plugin-404": "3.2.0",
+    "@8hobbies/typedoc-plugin-404": "3.2.1",
     "@8hobbies/typedoc-plugin-plausible": "2.2.0",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.2.0",
